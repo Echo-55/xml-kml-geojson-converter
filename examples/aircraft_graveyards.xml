@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<markers>
+    <marker>
+        <name>Abu Dhabi International Airport</name>
+        <adr>Abu Dhabi, UAE</adr>
+        <geo>24.437870, 54.629844</geo>
+        <note>About 12 aircraft</note>
+        <type>C</type>
+    </marker>
+    <marker>
+        <name>Wilson Airport</name>
+        <adr>Nairobi, Kenya</adr>
+        <geo>-1.323761, 36.806018</geo>
+        <note>about 100 aircraft</note>
+        <type>C</type>
+        <w>Wilson_Airport</w>
+    </marker>
+    <marker>
+        <name>California City Municipal Airport</name>
+        <adr>California City, California</adr>
+        <geo>35.148344, -118.022459</geo>
+        <note>about 20 aircraft - Gulfstreams</note>
+        <type>C</type>
+        <w>California_City_Municipal_Airport</w>
+    </marker>
+    <marker>
+        <name>Alice Springs Airport</name>
+        <adr>Alice Springs, Australia</adr>
+        <geo>-23.806944, 133.902222</geo>
+        <url title="Asia Pacific Aircraft Storage">
+            http://www.alicespringsairport.com.au/sites/default/files/APAS%20Brochure%20%28Web%29.pdf
+        </url>
+        <url title="BBC: Extra facility opened for planes grounded by Covid-19">
+            https://www.bbc.com/news/business-54335931
+        </url>
+        <note>Opened in 2014.</note>
+        <type>C</type>
+    </marker>
+    <marker>
+        <name>Chino Airport</name>
+        <adr>Chino, CA</adr>
+        <geo>33.977873, -117.639123</geo>
+        <type>C</type>
+    </marker>
+    <marker>
+        <name>Cotswold Airport</name>
+        <adr>Kemble, Cirencester, Gloucestershire, England</adr>
+        <geo>51.668056, -2.056944</geo>
+        <url title="Air Salvage International">http://airsalvage.co.uk/</url>
+        <type>C</type>
+        <note>About 45 aircraft</note>
+    </marker>
+    <marker>
+        <name>Tarbes-Lourdes-Pyrenees Airport</name>
+        <adr>Hautes-Pyrénées, France</adr>
+        <geo>43.185, -0.001944</geo>
+        <note>Approximately 45 aircraft</note>
+        <url title="Web site">http://www.tarmacaerosave.aero/index.php?lang=en</url>
+    </marker>
+    <marker>
+        <name>Manas International Airport</name>
+        <adr>Bishkek, Kyrgyzstan</adr>
+        <geo>43.061306, 74.477556</geo>
+        <url title="Map">
+            https://www.google.com/maps/place/43%C2%B003'40.7%22N+74%C2%B028'39.2%22E/@43.0531277,74.4797018,371m/data=!3m1!1e3!4m5!3m4!1s0x0:0x0!8m2!3d43.061306!4d74.477556?hl=en
+        </url>
+        <note>Approximately 20 aircraft</note>
+    </marker>
+    <marker>
+        <name>Mary Airport</name>
+        <adr>Turkmenistan</adr>
+        <geo>37.664, 61.830</geo>
+        <note>Looks like 76 SU-17 Fitter bombers are stored here</note>
+    </marker>
+    <marker>
+        <name>Maxton Airport</name>
+        <adr>Maxton, NC</adr>
+        <geo>34.791944, -79.365833</geo>
+        <note>Approximately 10 aircraft</note>
+    </marker>
+    <marker>
+        <name>Hawkins and Powers</name>
+        <adr>Greybull, WY</adr>
+        <geo>44.514, -108.082</geo>
+        <note>Approximately 25 aircraft</note>
+    </marker>
+    <marker>
+        <name>Kingman Airport</name>
+        <adr>Kingman, AZ</adr>
+        <geo>35.259444, -113.938056</geo>
+        <note>Approximately 260 aircraft</note>
+    </marker>
+    <marker>
+        <name>Phoenix Goodyear Airport</name>
+        <adr>Phoenix, AZ</adr>
+        <geo>33.423611, -112.374444</geo>
+        <note>Approximately 70 aircraft</note>
+    </marker>
+    <marker>
+        <name>Abilene Regional Airport</name>
+        <adr>Abilene, TX</adr>
+        <geo>32.430287836615456, -99.68871911838612</geo>
+        <note>Approximately 20 aircraft. American Eagle Airlines Saab 340</note>
+    </marker>
+    <marker>
+        <name>Southern California Logistics Airport</name>
+        <adr>Victorville, CA</adr>
+        <geo>34.5975, -117.383056</geo>
+        <note>Approximately 423 aircraft</note>
+    </marker>
+    <marker>
+        <name>Mojave Airport</name>
+        <adr>Mojave, CA</adr>
+        <geo>35.0616, -118.144</geo>
+        <note>Approximately 100 aircraft</note>
+    </marker>
+    <marker>
+        <name>Pinal Airpark</name>
+        <adr>Marana, AZ</adr>
+        <geo>32.509722, -111.325278</geo>
+        <note>Approximately 150 aircraft</note>
+    </marker>
+    <marker>
+        <name>Roswell International Air Center</name>
+        <adr>Roswell, NM</adr>
+        <geo>33.301556, -104.530556</geo>
+        <note>Approximately 150 aircraft</note>
+    </marker>
+    <marker>
+        <name>Marana Regional Airport</name>
+        <aka>Marana Northwest Regional Airport</aka>
+        <aka>Avra Valley Airport</aka>
+        <adr>Marana, AZ</adr>
+        <geo>32.409556, -111.218389</geo>
+        <note>The first Air Force One is here - a Lockheed Constellation used by President Eisenhower.</note>
+        <note>Approximately 12 aircraft.</note>
+    </marker>
+    <marker>
+        <name>Tupelo Regional Airport</name>
+        <adr>Tupelo, MS</adr>
+        <geo>34.268056, -88.77</geo>
+        <note>Approximately 7 aircraft. Had more in the past.</note>
+    </marker>
+    <marker>
+        <name>Stuttgart Municipal Airport</name>
+        <adr>Stuttgart, AR</adr>
+        <geo>34.592670, -91.574818</geo>
+        <note>Approximately 19 aircraft.</note>
+    </marker>
+    <marker>
+        <name>Greenwood-Leflore Airport</name>
+        <adr>Greenwood, MS</adr>
+        <geo>33.494167, -90.084722</geo>
+        <note>Approximately 6 aircraft. Had more in the past.</note>
+    </marker>
+    <marker>
+        <name>Laurinburg-Maxton Airport</name>
+        <adr>Maxton, NC</adr>
+        <geo>34.791944, -79.365833</geo>
+        <note>Approximately 10 aircraft.</note>
+    </marker>
+    <marker>
+        <name>Harry Truman Airport</name>
+        <aka>Cyril E. King Airport</aka>
+        <adr>Bates City, MO</adr>
+        <geo>39.018171, -94.088793</geo>
+        <note>Hundreds of aircraft. Mostly small and private.</note>
+    </marker>
+    <marker>
+        <name>Aberdeen Proving Ground</name>
+        <adr>Phillips Army Airfield</adr>
+        <geo>39.462, -76.183</geo>
+        <note>Approximately 22 aircraft and a few helicopters.</note>
+    </marker>
+    <marker>
+        <name>Oscoda–Wurtsmith Airport</name>
+        <adr>Oscoda, MI</adr>
+        <geo>44.4545, -83.373883</geo>
+        <note>Approximately 30 aircraft.</note>
+    </marker>
+    <marker>
+        <name>Smyrna Airport</name>
+        <adr>Smyrna, TN</adr>
+        <geo>36.008889, -86.52</geo>
+        <note>Approximately 15 aircraft.</note>
+    </marker>
+    <marker>
+        <name>Wilmington Air Park</name>
+        <adr>Wilmington, OH</adr>
+        <geo>39.42805, -83.792222</geo>
+        <note>Approximately 5 aircraft.</note>
+    </marker>
+    <marker>
+        <name>Falcon Field</name>
+        <adr>Mesa, AZ</adr>
+        <geo>33.460833, -111.728333</geo>
+        <note>Approximately 7 aircraft.</note>
+    </marker>
+    <marker>
+        <name>Fairbanks International Airport</name>
+        <aka>Everts Air Cargo</aka>
+        <adr>Fairbanks, AK</adr>
+        <geo>64.809782, -147.880434</geo>
+        <note>Approximately 26 aircraft. Some have been scrapped.</note>
+    </marker>
+    <marker>
+        <name>Miami-Opa Locka Executive Airport</name>
+        <adr>Opa-locka, FL</adr>
+        <geo>25.907909, -80.264409</geo>
+        <note>Approximately 25 aircraft.</note>
+    </marker>
+    <marker>
+        <name>Walnut Ridge Regional Airport</name>
+        <aka>Marine Corps Air Facility Walnut Ridge</aka>
+        <aka>Walnut Ridge Army Air Field</aka>
+        <adr>Walnut Ridge, AR</adr>
+        <geo>36.127629, -90.921404</geo>
+        <note>Post WW2 - thousands of aircraft. Zero now</note>
+        <type>M</type>
+    </marker>
+    <marker>
+        <name>Robins Air Force Base</name>
+        <adr>Warner Robins, GA</adr>
+        <geo>32.631949, -83.594138</geo>
+        <note>Approximately 13 aircraft.</note>
+        <type>M</type>
+    </marker>
+    <marker>
+        <name>Teruel Airport</name>
+        <adr>Teruel, Spain</adr>
+        <geo>40.411931, -1.227834</geo>
+        <note>Approximately 50 aircraft.</note>
+    </marker>
+    <marker>
+        <name>Saskatoon John G. Diefenbaker International Airport</name>
+        <adr>Saskatoon, Canada</adr>
+        <geo>52.178619, -106.683064</geo>
+        <note>Approximately 9 aircraft.</note>
+    </marker>
+    <marker>
+        <name>Arkansas International Airport</name>
+        <adr>Blytheville, Arkansas</adr>
+        <geo>35.956149, -89.949481</geo>
+        <note>Approximately 40 aircraft. Some are being scrapped.</note>
+    </marker>
+    <marker>
+        <name>El Alto International Airport</name>
+        <adr>La Paz, Bolivia</adr>
+        <geo>-16.504082, -68.178393</geo>
+        <note>Approximately 18 aircraft.</note>
+    </marker>
+    <marker>
+        <name>Ivato International Airport</name>
+        <adr>Antananarivo, Madagascar</adr>
+        <geo>-18.797992, 47.471207</geo>
+        <note>Approximately 16 aircraft.</note>
+    </marker>
+    <marker>
+        <name>Grant County International Airport</name>
+        <adr>Moses Lake, Washington</adr>
+        <geo>47.19475186997992, -119.3011771</geo>
+        <note>Boeing stored a few hundred undelivered 737 MAX there. Most are gone now.</note>
+        <note></note>
+    </marker>
+    <marker>
+        <name>Tucson Internetional Airport</name>
+        <adr>Tucson, AZ</adr>
+        <geo>32.114053, -110.947576</geo>
+        <note>Approximately 100 aircraft.</note>
+    </marker>
+    <marker>
+        <name>Davis Monthan AFB</name>
+        <adr>Tucson, AZ</adr>
+        <geo>32.166389, -110.883056</geo>
+        <url title="Davis-Monthan Air Force Boneyard in Tucson">
+            http://www.airplaneboneyards.com/davis-monthan-afb-amarg-airplane-boneyard.htm
+        </url>
+        <w title="">Davis%E2%80%93Monthan_Air_Force_Base</w>
+        <type>M</type>
+    </marker>
+</markers>

@@ -1,0 +1,620 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Abu Dhabi International Airport",
+        "address": "Abu Dhabi, UAE",
+        "note": "About 12 aircraft"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          54.629844,
+          24.43787
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wilson Airport",
+        "address": "Nairobi, Kenya",
+        "note": "about 100 aircraft"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.806018,
+          -1.323761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "California City Municipal Airport",
+        "address": "California City, California",
+        "note": "about 20 aircraft - Gulfstreams"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.022459,
+          35.148344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alice Springs Airport",
+        "address": "Alice Springs, Australia",
+        "note": "Opened in 2014."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          133.902222,
+          -23.806944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chino Airport",
+        "address": "Chino, CA",
+        "note": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.639123,
+          33.977873
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cotswold Airport",
+        "address": "Kemble, Cirencester, Gloucestershire, England",
+        "note": "About 45 aircraft"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.056944,
+          51.668056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tarbes-Lourdes-Pyrenees Airport",
+        "address": "Hautes-Pyr\u00e9n\u00e9es, France",
+        "note": "Approximately 45 aircraft"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.001944,
+          43.185
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Manas International Airport",
+        "address": "Bishkek, Kyrgyzstan",
+        "note": "Approximately 20 aircraft"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.477556,
+          43.061306
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mary Airport",
+        "address": "Turkmenistan",
+        "note": "Looks like 76 SU-17 Fitter bombers are stored here"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          61.83,
+          37.664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Maxton Airport",
+        "address": "Maxton, NC",
+        "note": "Approximately 10 aircraft"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.365833,
+          34.791944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hawkins and Powers",
+        "address": "Greybull, WY",
+        "note": "Approximately 25 aircraft"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.082,
+          44.514
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kingman Airport",
+        "address": "Kingman, AZ",
+        "note": "Approximately 260 aircraft"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.938056,
+          35.259444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Phoenix Goodyear Airport",
+        "address": "Phoenix, AZ",
+        "note": "Approximately 70 aircraft"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.374444,
+          33.423611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Abilene Regional Airport",
+        "address": "Abilene, TX",
+        "note": "Approximately 20 aircraft. American Eagle Airlines Saab 340"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.68871911838612,
+          32.430287836615456
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Southern California Logistics Airport",
+        "address": "Victorville, CA",
+        "note": "Approximately 423 aircraft"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.383056,
+          34.5975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mojave Airport",
+        "address": "Mojave, CA",
+        "note": "Approximately 100 aircraft"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.144,
+          35.0616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pinal Airpark",
+        "address": "Marana, AZ",
+        "note": "Approximately 150 aircraft"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.325278,
+          32.509722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Roswell International Air Center",
+        "address": "Roswell, NM",
+        "note": "Approximately 150 aircraft"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.530556,
+          33.301556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Marana Regional Airport",
+        "address": "Marana, AZ",
+        "note": "The first Air Force One is here - a Lockheed Constellation used by President Eisenhower."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.218389,
+          32.409556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tupelo Regional Airport",
+        "address": "Tupelo, MS",
+        "note": "Approximately 7 aircraft. Had more in the past."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.77,
+          34.268056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stuttgart Municipal Airport",
+        "address": "Stuttgart, AR",
+        "note": "Approximately 19 aircraft."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -91.574818,
+          34.59267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Greenwood-Leflore Airport",
+        "address": "Greenwood, MS",
+        "note": "Approximately 6 aircraft. Had more in the past."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.084722,
+          33.494167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Laurinburg-Maxton Airport",
+        "address": "Maxton, NC",
+        "note": "Approximately 10 aircraft."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.365833,
+          34.791944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harry Truman Airport",
+        "address": "Bates City, MO",
+        "note": "Hundreds of aircraft. Mostly small and private."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.088793,
+          39.018171
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Aberdeen Proving Ground",
+        "address": "Phillips Army Airfield",
+        "note": "Approximately 22 aircraft and a few helicopters."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.183,
+          39.462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oscoda\u2013Wurtsmith Airport",
+        "address": "Oscoda, MI",
+        "note": "Approximately 30 aircraft."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.373883,
+          44.4545
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Smyrna Airport",
+        "address": "Smyrna, TN",
+        "note": "Approximately 15 aircraft."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.52,
+          36.008889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wilmington Air Park",
+        "address": "Wilmington, OH",
+        "note": "Approximately 5 aircraft."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.792222,
+          39.42805
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Falcon Field",
+        "address": "Mesa, AZ",
+        "note": "Approximately 7 aircraft."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.728333,
+          33.460833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fairbanks International Airport",
+        "address": "Fairbanks, AK",
+        "note": "Approximately 26 aircraft. Some have been scrapped."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -147.880434,
+          64.809782
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Miami-Opa Locka Executive Airport",
+        "address": "Opa-locka, FL",
+        "note": "Approximately 25 aircraft."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.264409,
+          25.907909
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Walnut Ridge Regional Airport",
+        "address": "Walnut Ridge, AR",
+        "note": "Post WW2 - thousands of aircraft. Zero now"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.921404,
+          36.127629
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Robins Air Force Base",
+        "address": "Warner Robins, GA",
+        "note": "Approximately 13 aircraft."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.594138,
+          32.631949
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Teruel Airport",
+        "address": "Teruel, Spain",
+        "note": "Approximately 50 aircraft."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.227834,
+          40.411931
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Saskatoon John G. Diefenbaker International Airport",
+        "address": "Saskatoon, Canada",
+        "note": "Approximately 9 aircraft."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.683064,
+          52.178619
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Arkansas International Airport",
+        "address": "Blytheville, Arkansas",
+        "note": "Approximately 40 aircraft. Some are being scrapped."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.949481,
+          35.956149
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "El Alto International Airport",
+        "address": "La Paz, Bolivia",
+        "note": "Approximately 18 aircraft."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.178393,
+          -16.504082
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ivato International Airport",
+        "address": "Antananarivo, Madagascar",
+        "note": "Approximately 16 aircraft."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.471207,
+          -18.797992
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grant County International Airport",
+        "address": "Moses Lake, Washington",
+        "note": "Boeing stored a few hundred undelivered 737 MAX there. Most are gone now."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.3011771,
+          47.19475186997992
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tucson Internetional Airport",
+        "address": "Tucson, AZ",
+        "note": "Approximately 100 aircraft."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.947576,
+          32.114053
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Davis Monthan AFB",
+        "address": "Tucson, AZ",
+        "note": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.883056,
+          32.166389
+        ]
+      }
+    }
+  ]
+}
