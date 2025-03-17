@@ -89,12 +89,13 @@ python main.py -i examples\aircraft_graveyards.geojson -x
 ## 📜 Project Structure
 
 ```pgsql
-converter-tool/
+xml-kml-geojson-converter/
 │── src/
 │   ├── converter.py        # Core conversion logic
-│   ├── main.py             # CLI interface
+│   main.py                 # CLI interface
 │── examples                # Example dataset
 │── requirements.txt        # Dependencies
+│── LICENSE                 # License file
 │── README.md               # Documentation
 ```
 
