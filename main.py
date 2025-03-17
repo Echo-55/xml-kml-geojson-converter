@@ -1,4 +1,4 @@
-﻿from src import Converter, EConverterType
+﻿from src.converter import Converter, EConverterType
 from pathlib import Path
 from argparse import ArgumentParser, Namespace
 
@@ -39,7 +39,7 @@ class Main:
     def _save_to_file(self, data: str, convert_type: EConverterType) -> None:
         """Save the converted data to a file."""
         output_file = self.input_file.with_suffix(f'.{convert_type.value}')
-        with open(output_file, 'w') as file:
+        with open(output_file, 'w', encoding='utf-8') as file:
             file.write(data)
         print(f"Saved data to {output_file}")
 
