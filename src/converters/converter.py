@@ -19,7 +19,7 @@ class Converter:
     def _parse_input_file(self):
         if self.input_file.suffix == ".xml":
             return self._parse_xml()
-        elif self.input_file.suffix == ".json":
+        elif self.input_file.suffix == ".json" or self.input_file.suffix == ".geojson":
             return self._parse_geojson()
         elif self.input_file.suffix == ".kml":
             return self._parse_kml()
@@ -83,7 +83,7 @@ class Converter:
         current_type = None
         if self.input_file.suffix == ".xml":
             current_type = EConverterType.XML
-        elif self.input_file.suffix == ".json":
+        elif self.input_file.suffix == ".json" or self.input_file.suffix == ".geojson":
             current_type = EConverterType.GEOJSON
         elif self.input_file.suffix == ".kml":
             current_type = EConverterType.KML
