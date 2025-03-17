@@ -1,4 +1,4 @@
-﻿from src.converters import Converter, EConverterType
+﻿from src import Converter, EConverterType
 from pathlib import Path
 from argparse import ArgumentParser, Namespace
 
