@@ -36,24 +36,6 @@ class Main:
                 self._save_to_file(converted_data, target_type)
         print("Conversion completed.")
 
-    def _convert_to_xml(self) -> None:
-        """Convert the input file to XML format."""
-        xml_data = self.converter.convert(EConverterType.XML)
-        if xml_data is None: return
-        self._save_to_file(xml_data, EConverterType.XML)
-
-    def _convert_to_geojson(self) -> None:
-        """Convert the input file to GeoJSON format."""
-        geojson_data = self.converter.convert(EConverterType.GEOJSON)
-        if geojson_data is None: return
-        self._save_to_file(geojson_data, EConverterType.GEOJSON)
-
-    def _convert_to_kml(self) -> None:
-        """Convert the input file to KML format."""
-        kml_data = self.converter.convert(EConverterType.KML)
-        if kml_data is None: return
-        self._save_to_file(kml_data, EConverterType.KML)
-
     def _save_to_file(self, data: str, convert_type: EConverterType) -> None:
         """Save the converted data to a file."""
         output_file = self.input_file.with_suffix(f'.{convert_type.value}')
@@ -66,7 +48,8 @@ if __name__ == '__main__':
     prog = "xml2geojson2kml"
     version = "0.1.0"
     description = "XML, KML, and GeoJSON Converter."
-    parser = ArgumentParser(description="")
+    parser = ArgumentParser(
+        description="A Python tool for converting location data between XML, KML, and GeoJSON formats.")
     parser.add_argument("-i", "--input", type=str, required=True, help="Input XML file to convert")
     parser.add_argument("-x", "--xml", action="store_true", help="Convert to XML")
     parser.add_argument("-g", "--geojson", action="store_true", help="Convert to GeoJSON")

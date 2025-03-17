@@ -14,17 +14,17 @@ A Python tool for converting location data between XML, KML, and GeoJSON formats
 ## 📦 Installation
 
 1. Clone the repository
-    ```bash
-    git clone https://github.com/Echo-55/xml-kml-geojson-converter.git
-    cd xml-kml-geojson-converter
-    ```
 
----
+ ```bash
+ git clone https://github.com/Echo-55/xml-kml-geojson-converter.git
+ cd xml-kml-geojson-converter
+ ```
 
 2. Install dependencies
-    ```bash
-   pip install -r requirements.txt
-   ```
+
+ ```bash
+pip install -r requirements.txt
+```
 
 ## ⚡ Usage
 
@@ -35,8 +35,6 @@ Run the script with:
 ```bash
 python main.py -i <input_file> -x -g -k
 ```
-
----
 
 ## Arguments
 
