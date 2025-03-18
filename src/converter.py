@@ -53,7 +53,7 @@ class Converter:
 
     def _parse_geojson(self) -> List[Dict[str, Any]]:
         """Parses GeoJSON file dynamically, ensuring all metadata fields are preserved."""
-        with open(self.input_file, "r", encoding="utf-8") as f:
+        with open(self.input_file, "r", encoding="utf-8-sig") as f:
             geojson = json.load(f)
 
         markers = []
@@ -132,19 +132,22 @@ class Converter:
         features = []
         for entry in self.data:
             lat, lon = entry["geo"]
+            properties = {key: value for key, value in entry.items() if key not in ["geo"]}
+
+            # Ensure 'adr' is correctly renamed to 'address' in GeoJSON
+            if "adr" in properties:
+                properties["address"] = properties.pop("adr")
+
             feature = {
                 "type": "Feature",
-                "properties": {
-                    "name": entry["name"],
-                    "address": entry.get("address", ""),
-                    "note": entry.get("note", ""),
-                },
+                "properties": properties,
                 "geometry": {
                     "type": "Point",
                     "coordinates": [lon, lat],  # GeoJSON uses [longitude, latitude]
                 },
             }
             features.append(feature)
+
         geojson = {"type": "FeatureCollection", "features": features}
         return json.dumps(geojson, indent=2)
 

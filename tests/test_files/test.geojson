@@ -1,0 +1,19 @@
+﻿{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Test Location",
+                "address": "123 Test Street",
+                "state": "TX",
+                "type": "A",
+                "note": "Test note"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-97.123456, 30.123456]
+            }
+        }
+    ]
+}

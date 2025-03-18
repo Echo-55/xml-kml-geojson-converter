@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+    <Document>
+        <name>Test KML</name>
+        <description>This is a test KML file.</description>
+        <Style id="exampleStyle">
+            <IconStyle>
+                <Icon>
+                    <href>http://example.com/icon.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Placemark>
+            <name>Test Placemark</name>
+            <description>This is a test placemark.</description>
+            <styleUrl>#exampleStyle</styleUrl>
+            <Point>
+                <coordinates>-122.0822035425683,37.42228990140251,0</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>
