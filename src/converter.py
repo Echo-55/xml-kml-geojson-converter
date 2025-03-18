@@ -1,8 +1,12 @@
 ﻿import json
 import pathlib
+import shutil
 from enum import Enum
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Tuple, TYPE_CHECKING
 import lxml.etree as et
+
+if TYPE_CHECKING:
+    from src.utils import Logger, Config
 
 
 class EConverterType(Enum):
@@ -12,23 +16,35 @@ class EConverterType(Enum):
 
 
 class Converter:
-    def __init__(self, input_file: str | pathlib.Path) -> None:
-        self.input_file = pathlib.Path(input_file)
-        self.data = self._parse_input_file()
+    def __init__(self, input_file: str | pathlib.Path, logger: "Logger", config: "Config") -> None:
+        self._input_file = pathlib.Path(input_file)
+        self._data = self._parse_input_file()
+        self._logger = logger
+        self._config = config
 
     def _parse_input_file(self):
-        if self.input_file.suffix == ".xml":
+        if self._input_file.suffix == ".xml":
             return self._parse_xml()
-        elif self.input_file.suffix == ".json" or self.input_file.suffix == ".geojson":
+        elif self._input_file.suffix == ".json" or self._input_file.suffix == ".geojson":
             return self._parse_geojson()
-        elif self.input_file.suffix == ".kml":
+        elif self._input_file.suffix == ".kml":
             return self._parse_kml()
         else:
             raise ValueError("Unsupported file format")
 
+    @property
+    def input_file(self) -> pathlib.Path:
+        """Returns the input file path."""
+        return self._input_file
+
+    @property
+    def data(self) -> List[Dict[str, Any]]:
+        """Returns the parsed data as a list of dictionaries."""
+        return self._data
+
     def _parse_xml(self) -> List[Dict[str, Any]]:
         """Parses XML file dynamically, ensuring all metadata fields are preserved."""
-        tree = et.parse(self.input_file)
+        tree = et.parse(self._input_file)
         root = tree.getroot()
         markers = []
 
@@ -53,7 +69,7 @@ class Converter:
 
     def _parse_geojson(self) -> List[Dict[str, Any]]:
         """Parses GeoJSON file dynamically, ensuring all metadata fields are preserved."""
-        with open(self.input_file, "r", encoding="utf-8-sig") as f:
+        with open(self._input_file, "r", encoding="utf-8-sig") as f:
             geojson = json.load(f)
 
         markers = []
@@ -72,7 +88,7 @@ class Converter:
 
     def _parse_kml(self) -> List[Dict[str, Any]]:
         """Parses KML file dynamically, ensuring all metadata fields are preserved."""
-        tree = et.parse(self.input_file)
+        tree = et.parse(self._input_file)
         root = tree.getroot()
         ns = {"kml": "http://www.opengis.net/kml/2.2"}
 
@@ -105,16 +121,16 @@ class Converter:
     def convert(self, new_type: EConverterType) -> str | None:
         """Converts the current data to the requested format. Returns None if conversion is unnecessary."""
         current_type = None
-        if self.input_file.suffix == ".xml":
+        if self._input_file.suffix == ".xml":
             current_type = EConverterType.XML
-        elif self.input_file.suffix == ".json" or self.input_file.suffix == ".geojson":
+        elif self._input_file.suffix == ".json" or self._input_file.suffix == ".geojson":
             current_type = EConverterType.GEOJSON
-        elif self.input_file.suffix == ".kml":
+        elif self._input_file.suffix == ".kml":
             current_type = EConverterType.KML
 
         # Skip conversion if already in the requested format
         if current_type == new_type:
-            print(f"Skipping conversion: File is already in {new_type.value} format.")
+            self._logger.print(f"Skipped: {self.input_file} is already in {new_type.value} format.")
             return None
 
         # Perform the conversion
@@ -130,7 +146,7 @@ class Converter:
     def _to_geojson(self) -> str:
         """Converts data to GeoJSON format."""
         features = []
-        for entry in self.data:
+        for entry in self._data:
             lat, lon = entry["geo"]
             properties = {key: value for key, value in entry.items() if key not in ["geo"]}
 
@@ -154,7 +170,7 @@ class Converter:
     def _to_xml(self) -> str:
         """Converts data to XML format using lxml.etree."""
         root = et.Element("markers")
-        for entry in self.data:
+        for entry in self._data:
             marker = et.SubElement(root, "marker")
             et.SubElement(marker, "name").text = entry["name"]
             et.SubElement(marker, "adr").text = entry.get("address", "")
@@ -169,7 +185,7 @@ class Converter:
         kml = et.Element("kml", xmlns="http://www.opengis.net/kml/2.2")
         doc = et.SubElement(kml, "Document")
 
-        for entry in self.data:
+        for entry in self._data:
             placemark = et.SubElement(doc, "Placemark")
             et.SubElement(placemark, "name").text = entry["name"]
 
