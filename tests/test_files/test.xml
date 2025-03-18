@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<markers>
+    <item>
+        <name>Test Location</name>
+        <adr>123 Test Street</adr>
+        <state>TX</state>
+        <geo>30.123456, -97.123456</geo>
+        <type>A</type>
+        <note>Test note</note>
+    </item>
+    <item>
+        <name>Another Location</name>
+        <adr>456 Another Ave</adr>
+        <state>CA</state>
+        <geo>34.567890, -118.123456</geo>
+        <type>B</type>
+        <note>Another note</note>
+    </item>
+</markers>

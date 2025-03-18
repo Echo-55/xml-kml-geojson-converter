@@ -3,6 +3,7 @@
 *$py.class
 .idea/**
 .vscode/*
+my_dir/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
