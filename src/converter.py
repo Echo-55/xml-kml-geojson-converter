@@ -40,6 +40,20 @@ class Converter:
                 "note": marker.findtext("note", ""),
             }
             markers.append(entry)
+        if not markers:
+            for item in root.findall("item"):
+                lat, lon = self._parse_coordinates(item.findtext("geo", ""))
+                entry = {
+                    "name": item.findtext("name", ""),
+                    "address": item.findtext("adr", ""),
+                    "geo": (lat, lon),  # Store as (latitude, longitude)
+                    "note": item.findtext("note", ""),
+                }
+                markers.append(entry)
+
+        if not markers:
+            raise ValueError("No valid markers found in the XML file.")
+
         return markers
 
     def _parse_geojson(self) -> List[Dict[str, Any]]:
@@ -154,7 +168,12 @@ class Converter:
     @staticmethod
     def _parse_coordinates(coord_text: str) -> Tuple[float, float]:
         """Parses coordinate string and ensures correct order."""
-        coords = [float(c) for c in coord_text.split(",")[:2]]
+        if coord_text == "" or coord_text is None:
+            return 0.0, 0.0
+        try:
+            coords = [float(c) for c in coord_text.split(",")[:2]]
+        except ValueError:
+            raise ValueError(f"Invalid coordinate format: {coord_text}")
         if len(coords) < 2:
             raise ValueError(f"Invalid coordinates: {coord_text}")
         return coords[0], coords[1]
