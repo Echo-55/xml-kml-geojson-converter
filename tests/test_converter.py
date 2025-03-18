@@ -5,6 +5,20 @@ from pathlib import Path
 from src.converter import Converter, EConverterType
 
 
+@pytest.fixture
+def config():
+    """Fixture to create a config instance."""
+    from src.utils import Config
+    return Config(Path("config.ini"))
+
+
+@pytest.fixture
+def logger(config):
+    """Fixture to create a logger instance."""
+    from src.utils import Logger
+    return Logger(config)
+
+
 # helper function to load test files
 def load_test_file(file_name: str) -> Path:
     """Load a test file and return its content."""
@@ -12,24 +26,24 @@ def load_test_file(file_name: str) -> Path:
 
 
 @pytest.fixture
-def xml_converter():
+def xml_converter(logger, config):
     """Fixture to create a Converter instance for XML."""
     input_file = load_test_file("test.xml")
-    return Converter(input_file)
+    return Converter(input_file, logger, config)
 
 
 @pytest.fixture
-def geojson_converter():
+def geojson_converter(logger, config):
     """Fixture to create a Converter instance for GeoJSON."""
     input_file = load_test_file("test.geojson")
-    return Converter(input_file)
+    return Converter(input_file, logger, config)
 
 
 @pytest.fixture
-def kml_converter():
+def kml_converter(logger, config):
     """Fixture to create a Converter instance for KML."""
     input_file = load_test_file("test.kml")
-    return Converter(input_file)
+    return Converter(input_file, logger, config)
 
 
 def test_parse_xml(xml_converter):
