@@ -138,6 +138,7 @@ xml-kml-geojson-converter/
 │   │   ├── test.xml
 │   │   ├── test.kml
 │   │   ├── test.geojson
+│── config.ini                   # Some configuration settings for user
 │── .gitignore                   # Git ignore file
 │── requirements.txt             # Dependencies
 │── LICENSE                      # License file
