@@ -27,29 +27,24 @@ class Converter:
             raise ValueError("Unsupported file format")
 
     def _parse_xml(self) -> List[Dict[str, Any]]:
-        """Parses XML file into a list of dictionaries."""
+        """Parses XML file dynamically, ensuring all metadata fields are preserved."""
         tree = et.parse(self.input_file)
         root = tree.getroot()
         markers = []
-        for marker in root.findall("marker"):
-            lat, lon = self._parse_coordinates(marker.findtext("geo", ""))
-            entry = {
-                "name": marker.findtext("name", ""),
-                "address": marker.findtext("adr", ""),
-                "geo": (lat, lon),  # Store as (latitude, longitude)
-                "note": marker.findtext("note", ""),
-            }
+
+        for marker in root.findall("marker") + root.findall("item"):  # Handle both <marker> and <item>
+            entry = {"geo": (0.0, 0.0)}  # Default geo
+
+            for child in marker:
+                tag = child.tag.lower()  # Normalize tag names
+                text = child.text.strip() if child.text else ""
+
+                if tag == "geo":
+                    entry["geo"] = self._parse_coordinates(text)  # Handle coordinates separately
+                else:
+                    entry[tag] = text  # Store all other metadata dynamically
+
             markers.append(entry)
-        if not markers:
-            for item in root.findall("item"):
-                lat, lon = self._parse_coordinates(item.findtext("geo", ""))
-                entry = {
-                    "name": item.findtext("name", ""),
-                    "address": item.findtext("adr", ""),
-                    "geo": (lat, lon),  # Store as (latitude, longitude)
-                    "note": item.findtext("note", ""),
-                }
-                markers.append(entry)
 
         if not markers:
             raise ValueError("No valid markers found in the XML file.")
@@ -57,39 +52,54 @@ class Converter:
         return markers
 
     def _parse_geojson(self) -> List[Dict[str, Any]]:
-        """Parses GeoJSON file into a list of dictionaries."""
+        """Parses GeoJSON file dynamically, ensuring all metadata fields are preserved."""
         with open(self.input_file, "r", encoding="utf-8") as f:
             geojson = json.load(f)
+
         markers = []
         for feature in geojson["features"]:
-            lon, lat = feature["geometry"]["coordinates"]  # GeoJSON uses [lon, lat]
-            entry = {
-                "name": feature["properties"].get("name", ""),
-                "address": feature["properties"].get("address", ""),
-                "geo": (lat, lon),  # Store as (latitude, longitude)
-                "note": feature["properties"].get("note", ""),
-            }
+            lon, lat = feature["geometry"]["coordinates"]  # GeoJSON uses [longitude, latitude]
+            entry = {"geo": (lat, lon)}  # Store as (latitude, longitude)
+
+            # Copy all properties dynamically
+            for key, value in feature["properties"].items():
+                if value is not None:
+                    entry[key.lower()] = value  # Normalize keys
+
             markers.append(entry)
+
         return markers
 
     def _parse_kml(self) -> List[Dict[str, Any]]:
-        """Parses KML file into a list of dictionaries."""
+        """Parses KML file dynamically, ensuring all metadata fields are preserved."""
         tree = et.parse(self.input_file)
         root = tree.getroot()
         ns = {"kml": "http://www.opengis.net/kml/2.2"}
 
         markers = []
         for placemark in root.findall(".//kml:Placemark", ns):
-            name = placemark.find("kml:name", ns)
-            coordinates = placemark.find(".//kml:coordinates", ns)
+            entry = {"geo": (0.0, 0.0)}  # Default geo
 
-            if name is not None and coordinates is not None:
+            name = placemark.find("kml:name", ns)
+            if name is not None:
+                entry["name"] = name.text.strip()
+
+            coordinates = placemark.find(".//kml:coordinates", ns)
+            if coordinates is not None:
                 lon, lat = self._parse_coordinates(coordinates.text.strip())
-                entry = {
-                    "name": name.text,
-                    "geo": (lat, lon),  # Swap to (latitude, longitude)
-                }
-                markers.append(entry)
+                entry["geo"] = (lat, lon)  # Swap KML [longitude, latitude] -> (latitude, longitude)
+
+            # Extract ExtendedData fields dynamically
+            extended_data = placemark.find("kml:ExtendedData", ns)
+            if extended_data is not None:
+                for data in extended_data.findall("kml:Data", ns):
+                    key = data.get("name")
+                    value = data.find("kml:value", ns)
+                    if key and value is not None:
+                        entry[key.lower()] = value.text.strip()  # Normalize keys
+
+            markers.append(entry)
+
         return markers
 
     def convert(self, new_type: EConverterType) -> str | None:
@@ -152,16 +162,25 @@ class Converter:
         return et.tostring(root, encoding="utf-8", xml_declaration=True, pretty_print=True).decode("utf-8")
 
     def _to_kml(self) -> str:
-        """Converts data to KML format using lxml.etree."""
+        """Converts data to KML format, preserving all metadata."""
         kml = et.Element("kml", xmlns="http://www.opengis.net/kml/2.2")
         doc = et.SubElement(kml, "Document")
 
         for entry in self.data:
             placemark = et.SubElement(doc, "Placemark")
             et.SubElement(placemark, "name").text = entry["name"]
+
+            # Add extended metadata
+            extended_data = et.SubElement(placemark, "ExtendedData")
+            for key, value in entry.items():
+                if key not in ["name", "geo"] and value:  # Skip name and geo
+                    data_element = et.SubElement(extended_data, "Data", name=key)
+                    et.SubElement(data_element, "value").text = str(value)
+
+            # Add coordinates
             point = et.SubElement(placemark, "Point")
             lat, lon = entry["geo"]
-            et.SubElement(point, "coordinates").text = f"{lon},{lat}"  # Swap to (longitude, latitude)
+            et.SubElement(point, "coordinates").text = f"{lon},{lat}"
 
         return et.tostring(kml, encoding="utf-8", xml_declaration=True, pretty_print=True).decode("utf-8")
 

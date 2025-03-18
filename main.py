@@ -5,23 +5,9 @@ from argparse import ArgumentParser, Namespace
 
 class Main:
     def __init__(self, prog_args: Namespace) -> None:
-        # parse the command line arguments
-        self.input_file = Path(prog_args.input)
+        """Initialize the main class with command line arguments."""
         self.target_types = []
-        if prog_args.xml:
-            self.target_types.append(EConverterType.XML)
-        if prog_args.geojson:
-            self.target_types.append(EConverterType.GEOJSON)
-        if prog_args.kml:
-            self.target_types.append(EConverterType.KML)
-        if not self.target_types:
-            raise ValueError("No target type specified. Use --xml, --geojson, or --kml.")
-
-        if prog_args.output:
-            self.output_file = Path(prog_args.output)
-        else:
-            self.output_file = self.input_file.with_suffix('')
-
+        self._parse_args(prog_args)
         self.converter = Converter(self.input_file)
 
     def run(self) -> None:
@@ -42,6 +28,24 @@ class Main:
         with open(output_file, 'w', encoding='utf-8') as file:
             file.write(data)
         print(f"Saved data to {output_file}")
+
+    def _parse_args(self, prog_args: Namespace) -> None:
+        """Parse command line arguments."""
+        self.input_file = Path(prog_args.input)
+        if prog_args.output:
+            self.output_file = Path(prog_args.output)
+        else:
+            self.output_file = self.input_file.with_suffix('')
+
+        if prog_args.xml:
+            self.target_types.append(EConverterType.XML)
+        if prog_args.geojson:
+            self.target_types.append(EConverterType.GEOJSON)
+        if prog_args.kml:
+            self.target_types.append(EConverterType.KML)
+
+        if not self.target_types:
+            raise ValueError("No target type specified. Use --xml, --geojson, or --kml.")
 
 
 if __name__ == '__main__':
